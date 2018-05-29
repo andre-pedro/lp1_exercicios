@@ -310,58 +310,21 @@ public class Map
 
 ---
 
-21 - _Exercício em construção_
+<a name="ex21"></a>
+21 - Cria uma nova solução em Visual Studio com as seguintes classes:
 
-<!--
-Consira a seguinte classe e responde, justificando, às questões em baixo.
-
-```cs
-using UnityEngine;
-
-namespace MyGame
-{
-    public class TargetController : MonoBehaviour
-    {
-
-        public GameObject target;
-        public float delay;
-
-        private GameArea gameArea;
-
-        private void Start()
-        {
-            gameArea = new GameArea();
-            target = GameObject.FindWithTag("Target");
-            SpawnTarget();
-        }
-
-        private void Update()
-        {
-            if ((target == null) && !IsInvoking("SpawnTarget"))
-            {
-                Invoke("SpawnTarget", delay);
-            }
-        }
-
-        private void SpawnTarget()
-        {
-            Vector2 pos = gameArea.RandomPosition(0.9f);
-            Instantiate(target, pos, Quaternion.identity);
-        }
-    }
-}
-```
-
-* namespace
-* Nome da classe, classe base e classe derivada
-* Variáveis de instância
-* propriedades
-* métodos de instância
-* uso de métodos herdados
-* uso de métodos estáticos
+* Classe abstrata `Character` com:
+  * Propriedade _read-only_ `Name` do tipo `string`
+  * Método `Move()` abstrato, que retorna um `char` indicando a direção seguida
+    (`'N'`, `'S'`, `'W'` ou `'E'`)
+* Classe `NPC`, estende `Character`, com:
+  * Método `Move()` que retorna direção aleatória
+* Classe `Player`, estende `Character`, com:
+  * Método `Move()` que retorna direção após solicitar a mesma ao jogador
+    através das teclas *W*, *S*, *A* e *D*
+* Classe `Program` com método `Main()` para testar as classes anteriores
 
 > [Soluções](../solucoes/03_poo/21.md)
--->
 
 ---
 
@@ -452,6 +415,12 @@ b) Adiciona um método à classe `Car` chamado `GetTotalWeight()` que retorne o
 peso total dos passageiros numa instância de `Car`.
 
 > [Soluções](../solucoes/03_poo/23.md)
+
+---
+
+24 - _Em construção_
+
+> [Soluções](../solucoes/03_poo/24.md)
 
 ---
 
