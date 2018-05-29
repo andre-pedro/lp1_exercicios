@@ -454,8 +454,9 @@ falsas:
 ---
 
 26 - Qual a diferença prática entre as _keywords_ `override` e `new` na
-declaração de um método? Dá um exemplo (se o exemplo for retirado de algum lado
-não te esqueças de incluir a referência).
+declaração de um método? Dá um exemplo.
+_Nota: se o exemplo for retirado de algum lado não te esqueças de incluir a
+referência._
 
 > [Soluções](../solucoes/03_poo/26.md)
 
@@ -464,7 +465,7 @@ não te esqueças de incluir a referência).
 27 - Estás a desenvolver um jogo, e tanto o jogador como os NPCs, representados
 de forma abstrata pela classe `GameCharacter`, transportam itens do tipo
 `IGameItem`. Os itens de cada `GameCharacter` estão guardados numa coleção
-genérica do tipo [HashSet<T>][], representada pela variável de instância
+genérica do tipo [HashSet&lt;T&gt;][], representada pela variável de instância
 `items`. Alguns destes itens podem implementar a interface `IBurnable`,
 representada pelo seguinte código:
 
@@ -550,18 +551,18 @@ vantagens destas últimas?
 [coleções genéricas][System.Collections.Generic]. Algumas das mais usadas são
 as que se seguem:
 
-* [List<T>][]
-* [Queue<T>][]
-* [Stack<T>][]
-* [HashSet<T>][]
-* [Dictionary<TKey,TValue>][]
+* [List&lt;T&gt;][]
+* [Queue&lt;T&gt;][]
+* [Stack&lt;T&gt;][]
+* [HashSet&lt;T&gt;][]
+* [Dictionary&lt;TKey,TValue&gt;][]
 
 Responde às seguintes questões:
 
 1. Qual a interface genérica comum a todas estas coleções? Que comportamento
    ficam as classes obrigadas a ter devido a implementarem essa interface?
 2. Explica sucintamente como estas coleções funcionam e dá exemplos onde cada
-   é especialmente útil.
+   uma seja especialmente útil.
 3. Além das coleções mencionadas, existem mais coleções genéricas no
   _namespace_ [System.Collections.Generic][]. Dá o exemplo de uma, explica
   sucintamente como funciona e dá um exemplo onde a mesma possa ser
@@ -589,8 +590,8 @@ Responde às seguintes questões:
 [Enqueue()]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.queue.enqueue#System_Collections_Queue_Enqueue_System_Object_
 [Dequeue()]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.queue.dequeue#System_Collections_Queue_Dequeue
 [ToArray()]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.queue.toarray
-[HashSet<T>]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.hashset-1
-[Dictionary<TKey,TValue>]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.dictionary-2
-[List<T>]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1
-[Queue<T>]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.queue-1
-[Stack<T>]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.stack-1
+[HashSet&lt;T&gt;]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.hashset-1
+[Dictionary&lt;TKey,TValue&gt;]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.dictionary-2
+[List&lt;T&gt;]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1
+[Queue&lt;T&gt;]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.queue-1
+[Stack&lt;T&gt;]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.stack-1
