@@ -738,3 +738,24 @@ void MisteryOp(char[] a)
 > [Soluções](../solucoes/02_bases_cs/45.md)
 
 ---
+
+46 - Indica os conteúdos do  _array_ devolvido pelo método `Process()`.
+
+```cs
+char[] Process()
+{
+    char[] a;
+    a = new char[] { 'a', 'b', 'c' };
+    MisteryOp(ref a);
+    return a;
+}
+
+void MisteryOp(ref char[] a)
+{
+    a = new char[] { a[2], a[1], a[0] };
+}
+```
+
+> [Soluções](../solucoes/02_bases_cs/46.md)
+
+---
