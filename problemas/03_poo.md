@@ -418,7 +418,21 @@ peso total dos passageiros numa instância de `Car`.
 
 ---
 
-24 - _Em construção_
+24 - Indica, justificando, se as seguintes afirmações são verdadeiras ou
+falsas:
+
+* O polimorfismo permite que classes derivadas ofereçam implementações
+  alternativas de métodos na classe base
+* A _keyword_ `override` indica que um método na subclasse é uma
+  extensão/sobreposição de um método na superclasse
+* A _keyword_ `new` indica que um método na subclasse é uma
+  extensão/sobreposição de um método na superclasse
+* Métodos `abstract` podem existir em classes não-`abstract`
+* Métodos não-`abstract` podem existir em classes `abstract`
+* Subclasses podem sobrepor métodos `virtual` da superclasse
+* Subclasses podem sobrepor métodos `abstract` da superclasse
+* Numa subclasse é possível sobrepor (`override`) um método não-`virtual` e
+  não-`abstract` da superclasse
 
 > [Soluções](../solucoes/03_poo/24.md)
 
