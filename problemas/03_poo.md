@@ -421,26 +421,161 @@ peso total dos passageiros numa instância de `Car`.
 24 - Indica, justificando, se as seguintes afirmações são verdadeiras ou
 falsas:
 
-* O polimorfismo permite que classes derivadas ofereçam implementações
-  alternativas de métodos na classe base
-* A _keyword_ `override` indica que um método na subclasse é uma
-  extensão/sobreposição de um método na superclasse
-* A _keyword_ `new` indica que um método na subclasse é uma
-  extensão/sobreposição de um método na superclasse
-* Métodos `abstract` podem existir em classes não-`abstract`
-* Métodos não-`abstract` podem existir em classes `abstract`
-* Subclasses podem sobrepor métodos `virtual` da superclasse
-* Subclasses podem sobrepor métodos `abstract` da superclasse
-* Numa subclasse é possível sobrepor (`override`) um método não-`virtual` e
-  não-`abstract` da superclasse
+1. O polimorfismo permite que classes derivadas ofereçam implementações
+   alternativas de métodos na classe base
+2. A _keyword_ `override` indica que um método na subclasse é uma
+   extensão/sobreposição de um método na superclasse
+3. A _keyword_ `new` indica que um método na subclasse é uma
+   extensão/sobreposição de um método na superclasse
+4. Métodos `abstract` podem existir em classes não-`abstract`
+5. Métodos não-`abstract` podem existir em classes `abstract`
+6. Subclasses podem sobrepor métodos `virtual` da superclasse
+7. Subclasses podem sobrepor métodos `abstract` da superclasse
+8. Numa subclasse é possível sobrepor (`override`) um método não-`virtual` e
+   não-`abstract` da superclasse
 
 > [Soluções](../solucoes/03_poo/24.md)
 
 ---
 
+25 - Responde às seguintes questões sobre interfaces e herança:
+
+1. Qual a _keyword_ para declarar uma interface?
+2. Qual é a visibilidade dos membros de uma interface?
+3. Uma classe que implementa uma interface tem de fornecer implementações de
+   todos os membros da interface?
+4. Uma classe que implementa uma interface pode ter membros que não estão
+   definidos na interface?
+5. Uma classe pode estender mais do que uma classe base?
+6. Uma classe pode implementar mais do que uma interface?
+
+> [Soluções](../solucoes/03_poo/25.md)
+
+---
+
+26 - Qual a diferença prática entre as _keywords_ `override` e `new` na
+declaração de um método? Dá um exemplo (se o exemplo for retirado de algum lado
+não te esqueças de incluir a referência).
+
+> [Soluções](../solucoes/03_poo/26.md)
+
+---
+
+27 - Estás a desenvolver um jogo, e tanto o jogador como os NPCs, representados
+de forma abstrata pela classe `GameCharacter`, transportam itens do tipo
+`IGameItem`. Os itens de cada `GameCharacter` estão guardados numa coleção
+genérica do tipo [HashSet<T>][], representada pela variável de instância
+`items`. Alguns destes itens podem implementar a interface `IBurnable`,
+representada pelo seguinte código:
+
+```cs
+public interface IBurnable
+{
+    float PotentialEnergy { get; }
+    void Burn();
+}
+```
+
+Escreve um método chamado `GetPotentialEnergyOfBurnableItems()`, pertencente à
+classe `GameCharacter`, que devolve a energia potencial de todos os itens
+queimáveis transportados pelo jogador ou por um NPC.
+
+> [Soluções](../solucoes/03_poo/27.md)
+
+---
+
+28 - Escreve o código de uma classe que contenha:
+
+* Uma variável de instância só de leitura
+* Uma propriedade (de instância) só de leitura
+* Uma variável de classe só de leitura
+* Uma propriedade de classe só de leitura
+* Um construtor que inicialize as variáveis/propriedades relevantes
+
+A classe deve ser adequadamente comentada, com explicações ou descrições sobre
+o que cada linha de código faz ou representa.
+
+> [Soluções](../solucoes/03_poo/28.md)
+
+---
+
+29 - Considera um projeto com as seguintes classes:
+
+```cs
+public class Tree
+{
+    private string type;
+    private float height;
+
+    public Tree(string type, float height)
+    {
+        this.type = type;
+        this.height = height;
+    }
+}
+```
+
+```cs
+using System;
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine(new Tree("Pinetree", 5.5f));
+    }
+}
+```
+
+Responde às seguintes questões:
+
+1. O que é impresso quando o projeto é executado?
+2. O que é necessário fazer para que seja impresso um valor personalizado
+   quando "imprimimos" uma instância de determinado tipo?
+3. Adiciona o código necessário à classe `Tree` de modo a que, ao ser impressa
+   uma instância da mesma, seja possível observar o tipo e a altura da árvore.
+
+> [Soluções](../solucoes/03_poo/29.md)
+
+---
+
+30 - Quais as diferenças entre as [coleções não-genéricas][System.Collections]
+e as [coleções genéricas][System.Collections.Generic] no C#? Quais as
+vantagens destas últimas?
+
+> [Soluções](../solucoes/03_poo/30.md)
+
+---
+
+31 - O C# providencia um conjunto bastante completo de
+[coleções genéricas][System.Collections.Generic]. Algumas das mais usadas são
+as que se seguem:
+
+* [List<T>][]
+* [Queue<T>][]
+* [Stack<T>][]
+* [HashSet<T>][]
+* [Dictionary<TKey,TValue>][]
+
+Responde às seguintes questões:
+
+1. Qual a interface genérica comum a todas estas coleções? Que comportamento
+   ficam as classes obrigadas a ter devido a implementarem essa interface?
+2. Explica sucintamente como estas coleções funcionam e dá exemplos onde cada
+   é especialmente útil.
+3. Além das coleções mencionadas, existem mais coleções genéricas no
+  _namespace_ [System.Collections.Generic][]. Dá o exemplo de uma, explica
+  sucintamente como funciona e dá um exemplo onde a mesma possa ser
+  especialmente útil.
+
+> [Soluções](../solucoes/03_poo/31.md)
+
+---
+
+
 [Stack]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.stack
 [System]: https://docs.microsoft.com/pt-pt/dotnet/api/system
 [System.Collections]: https://docs.microsoft.com/dotnet/api/system.collections
+[System.Collections.Generic]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic
 [stack/pilha]: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
 [Stack()]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.stack.-ctor#System_Collections_Stack__ctor
 [Push()]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.stack.push
@@ -454,3 +589,8 @@ falsas:
 [Enqueue()]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.queue.enqueue#System_Collections_Queue_Enqueue_System_Object_
 [Dequeue()]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.queue.dequeue#System_Collections_Queue_Dequeue
 [ToArray()]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.queue.toarray
+[HashSet<T>]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.hashset-1
+[Dictionary<TKey,TValue>]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.dictionary-2
+[List<T>]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1
+[Queue<T>]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.queue-1
+[Stack<T>]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.stack-1
