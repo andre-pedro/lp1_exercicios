@@ -7,12 +7,12 @@ cujo tipo é definido em tempo de execução (ou seja, por quem invoca o método
 
 ---
 
-2 - Cria uma classe `IntList` que estende `List<int>`, adicionando três métodos
-que retornam o valor mínimo (`int`), o valor máximo (`int`) e o valor médio
-(`float`) referentes aos inteiros contidos na lista. Os três métodos devem
-retornar estes valores de forma diferente: 1) usando parâmetros de saída
-(`out`); 2) usando uma classe/_struct_ específica; e, 3) usando tuplos. A
-segunda formas pressupõe a criação de uma classe ou _struct_ extra; neste caso
+2 - Cria uma classe `IntList` que estende `List<int>`, adicionando três versões
+de um método que retorne o valor mínimo (`int`), o valor máximo (`int`) e o
+valor médio (`float`) referentes aos inteiros contidos na lista. Cada versão do
+método deve retornar estes valores de forma diferente: 1) usando parâmetros de
+saída (`out`); 2) usando uma classe/_struct_ específica; e, 3) usando tuplos. A
+segunda forma pressupõe a criação de uma classe ou _struct_ extra; neste caso
 podem criar uma classe/_struct_ interna, ou seja, dentro da classe `IntList`.
 Sobrepõe ainda o método `ToString()` de modo a que a _string_ devolvida indique
 quantos elementos tem a lista, bem como os valores mínimo, máximo e médio
@@ -23,9 +23,9 @@ contidos na mesma.
 ---
 
 3 - Cria uma classe chamada `HighScoreManager`, que contém internamente uma
-coleção com um máximo de 10 `Tuple<string, float>`, representando nomes de
-jogadores e os respetivos _scores_. Além da coleção referida, a classe deve
-ainda conter:
+coleção com um máximo de 10 `Tuple<string, float>`, cada um representando o
+nome de um jogador e o respetivo _score_. Além da coleção referida, a classe
+deve ainda conter:
 
 * Um construtor, que aceita opcionalmente um nome de ficheiro (deve existir
   um nome por omissão), e:

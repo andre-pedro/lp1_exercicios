@@ -655,6 +655,23 @@ Mars              mars.map           92.1 %     2257.178
 
 ---
 
+33 - Escreve um método `static` que inicialize e devolva uma
+[lista genérica][List&lt;T&gt;] contendo _n_ cópias de um valor especificado.
+
+> [Soluções](../solucoes/03_poo/33.md)
+
+---
+
+<!--
+Abstract
+polimorfismo (virtual/override)
+Keyword base
+métodos genéricos
+métodos iteráveis
+classes genéricas e default
+ienumerable<t>
+sintaxe de inicialização de coleções
+-->
 
 
 [Stack]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.stack
