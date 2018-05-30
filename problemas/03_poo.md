@@ -572,6 +572,90 @@ Responde às seguintes questões:
 
 ---
 
+32 - Considera o seguinte tipo:
+
+```cs
+public struct GameMap
+{
+    private float topScore;
+    private int gamesPlayed;
+    private int gamesWon;
+
+    public string Name { get; }
+    public string Filename { get; }
+    public float SuccessRate
+    {
+        get {
+            if (gamesPlayed == 0)
+                return 0f;
+            else
+                return gamesWon / (float) gamesPlayed;
+        }
+    }
+    public float TopScore {
+        get
+        {
+            return topScore;
+        }
+        set
+        {
+            if (value > topScore)
+            {
+                topScore = value;
+            }
+        }
+    }
+
+    public GameMap(string name, string filename)
+    {
+        Name = name;
+        Filename = filename;
+        gamesPlayed = 0;
+        gamesWon = 0;
+        topScore = 0;
+    }
+
+    public void GamePlayed(bool won)
+    {
+        gamesPlayed++;
+        if (won)
+        {
+            gamesWon++;
+        }
+    }
+}
+```
+
+Responde às seguintes questões relativas ao tipo apresentado:
+
+1. O tipo apresentado é de valor ou referência? Justifica a tua resposta.
+2. Identifica as variáveis de instância e explica o seu propósito.
+3. Identifica as propriedades auto-implementadas.
+4. Identifica as propriedades só de leitura.
+5. Identifica os construtores.
+6. Identifica os métodos de instância.
+7. Escreve a documentação XML apropriada para a classe e respetivos membros.
+8. Escreve um método `static` que recebe um iterável de `GameMap` e imprime
+   uma tabela bem formatada com informação sobre os mesmos, tal como
+   representado na seguinte figura:
+
+```
+Name              Filename      Sucess Rate    Top Score
+--------------------------------------------------------
+Hell              hell.map           30.2 %     5069.921
+Beach             beach.map          44.0 %     2231.887
+Valley            valley.map         72.1 %      131.090
+Work              work.map           44.4 %     2334.114
+School            school.map         11.5 %       40.587
+Graveyard         graveyard.map      69.8 %     1631.103
+Mars              mars.map           92.1 %     2257.178
+```
+
+> [Soluções](../solucoes/03_poo/32.md)
+
+---
+
+
 
 [Stack]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.stack
 [System]: https://docs.microsoft.com/pt-pt/dotnet/api/system
