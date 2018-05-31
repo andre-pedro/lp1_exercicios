@@ -73,3 +73,140 @@ class Program
 > [Soluções](../solucoes/05_avancado/04.md)
 
 ---
+
+5 - Cria uma classe, com **um único** método estático `Main()`, que solicita ao
+utilizador um número inteiro positivo e apresenta o respetivo número da
+[sequência de Lucas](https://en.wikipedia.org/wiki/Lucas_number). Este número
+é tipicamente calculado de forma recursiva, e para o efeito podem usar funções
+locais.
+
+> [Soluções](../solucoes/05_avancado/05.md)
+
+---
+
+6 - Considera o seguinte método:
+
+```cs
+public void AwesomeMethod(float a, float b, int c = 2, string d = "hi!")
+{
+    Console.WriteLine($"{a} {b} {c} {d}");
+}
+```
+
+1. Quais os parâmetros obrigatórios?
+2. Quais os parâmetros opcionais?
+3. Qual o valor de `a`, `b`, `c` e `d` se método for invocado da seguinte
+forma: `AwesomeMethod(-1.0f, 0.0f, d: "bye!")`?
+4. Qual o valor de `a`, `b`, `c` e `d` se método for invocado da seguinte
+forma: `AwesomeMethod(50, -10, 14)`?
+5. Qual o valor de `a`, `b`, `c` e `d` se método for invocado da seguinte
+forma: `AwesomeMethod(c: 100, b: 123f, d: "yeah!", a: 0)`?
+5. Qual o valor de `a`, `b`, `c` e `d` se método for invocado da seguinte
+forma: `AwesomeMethod(b: 1, a: 2)`?
+
+> [Soluções](../solucoes/05_avancado/06.md)
+
+---
+
+7 - Cria uma classe estática chamada `Stats` com vários métodos utilitários
+para determinar estatísticas simples. Cada um destes métodos deve aceitar um
+número variável de _doubles_ e retornar o valor estatístico que lhe compete.
+Devem existir métodos para a retornar a média, mediana, moda, máximo e mínimo.
+
+Cria também uma classe `Program` com um método `Main()` para testar os vários
+métodos da classe `Stats`.
+
+> [Soluções](../solucoes/05_avancado/07.md)
+
+---
+
+8 - Adiciona dois método à classe criada no exercício anterior:
+
+1. O primeiro retorna todas as estatísticas de um número variável de _doubles_
+   (média, mediana, moda, máximo e mínimo) num tuplo.
+2. O segundo retorna todas as estatísticas de um número variável de _doubles_
+   (média, mediana, moda, máximo e mínimo) em parâmetros `out`.
+
+Ambos os métodos devem fazer uso dos métodos já existentes para cálculo das
+estatísticas.
+
+Atualiza o método `Main()` da classe `Program` para testar os dois métodos
+novos.
+
+> [Soluções](../solucoes/05_avancado/08.md)
+
+---
+
+9 - Responde às seguintes questões:
+
+1. Nos métodos, os parâmetros opcionais têm de aparecer a seguir a todos
+   os parâmetros obrigatórios?
+2. Num método, um parâmetro com a _keyword_ `params` tem de ser o último?
+3. Dado o método
+   `void AwesomeMethod(float x, int y = 2, params double[] z) {...}`, quais das
+   seguintes instruções são válidas? Em caso afirmativo, quais os conteúdos de
+   `x`, `y` e `z`?
+
+
+* `AwesomeMethod(a: 2.1f, 3, 12, 23f, 34.5, -123.0);`
+* `AwesomeMethod(1.7f);`
+* `AwesomeMethod();`
+* `AwesomeMethod(0.01f, z: new double[] { 2.3, 4, -4f });`
+* `AwesomeMethod(0, 2.3f, 2, 3, 4, 5);`
+* `AwesomeMethod(-1.9f, 2, 3.0, 4.0, 5.0, 6.0, 19, -1, 4);`
+
+
+> [Soluções](../solucoes/05_avancado/09.md)
+
+---
+
+10 - Quais as vantagens e desvantagens do uso de `out` e `ref` na passagem de
+parâmetros para métodos?
+
+> [Soluções](../solucoes/05_avancado/10.md)
+
+---
+
+11 - Qual a diferença entre `out` e `ref` na passagem de parâmetros para
+métodos?
+
+> [Soluções](../solucoes/05_avancado/11.md)
+
+---
+
+12 - Responde Sim/Não às seguintes questões:
+
+1. Um parâmetro `out` indica que foi passada uma referência para a própria
+variável em vez de uma cópia da mesma?
+2. Um parâmetro `ref` indica que foi passada uma referência para a própria
+variável em vez de uma cópia da mesma?
+3. Os parâmetros `out` têm de ser inicializados dentro do método?
+4. Os parâmetros `ref` têm de ser inicializados dentro do método?
+
+> [Soluções](../solucoes/05_avancado/12.md)
+
+---
+
+13 - Escreve um programa que aceita _strings_ escritas pelo utilizador em
+_loop_, gravando as mesmas convertidas em maiúsculas num ficheiro especificado
+como argumento da linha de comandos. O programa termina quando o utilizador
+insere uma _string_ vazia (isto é, simplesmente pressiona ENTER sem escrever
+nada).
+
+_Sugestão_: confere o método [ToUpper()](https://docs.microsoft.com/pt-pt/dotnet/api/system.string.toupper)
+da classe [string](https://docs.microsoft.com/pt-pt/dotnet/api/system.string).
+
+> [Soluções](../solucoes/05_avancado/13.md)
+
+---
+
+14 - Escreve um programa que aceita _strings_ escritas pelo utilizador em
+_loop_ e tenta converte-las em `byte`. Em caso de sucesso mostra uma mensagem
+apropriada contendo o valor convertido. Em caso de falhanço, mostra uma
+mensagem com indicação desse facto. O programa termina quando o utilizador
+insere uma _string_ vazia (isto é, simplesmente pressiona ENTER sem escrever
+nada).
+
+> [Soluções](../solucoes/05_avancado/14.md)
+
+---

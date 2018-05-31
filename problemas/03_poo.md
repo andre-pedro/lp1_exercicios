@@ -718,8 +718,8 @@ classes.
 
 
 <!--
-Abstract
-polimorfismo (virtual/override)
+*Abstract
+*polimorfismo (virtual/override)
 Keyword base
 métodos genéricos
 métodos iteráveis
