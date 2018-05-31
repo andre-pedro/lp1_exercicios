@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LP1_Exercises
+namespace LP1Exercises
 {
     public class Player : Character
     {

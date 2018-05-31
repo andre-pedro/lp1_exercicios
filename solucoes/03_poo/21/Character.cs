@@ -1,4 +1,4 @@
-﻿namespace LP1_Exercises
+﻿namespace LP1Exercises
 {
     public abstract class Character
     {
