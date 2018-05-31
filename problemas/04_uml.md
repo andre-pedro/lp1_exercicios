@@ -72,7 +72,10 @@ nome do tipo, relações entre os tipos, e cardinalidade) para o código do
 
 ---
 
-7 - Considera a seguinte classe:
+<a name="ex7"></a>
+7 - (continuação do [exercício 34](03_poo.md#ex34) de Programação por Objetos)
+
+Considera a seguinte classe:
 
 ```cs
 public abstract class NPC
@@ -109,22 +112,17 @@ public abstract class NPC
 }
 ```
 
-Responde às seguintes questões:
-
-1. É possível instanciar esta classe? Porquê?
-2. Que métodos desta classe podem ser sobrepostos (_overridden_)? E quais os
-   métodos que **não** podem ser sobrepostos?
-3. Cria pelo menos 3 subclasses concretas (não abstratas), representando
+1. Cria pelo menos 3 subclasses concretas (não abstratas), representando
    diferentes NPCs num jogo, com lógicas concretas e específicas para cada um
    deles. Os métodos `EatFood()` e `AttackEnemies()` podem consistir apenas de
    `Console.WriteLines`.
-4. Cria uma classe `Program` com um método `Main()` para testar as classes
+2. Cria uma classe `Program` com um método `Main()` para testar as classes
    criadas no ponto anterior. Por exemplo, criar uma ou mais instâncias de cada
    classe, colocar as mesmas numa coleção de `NPC`, percorrer a coleção, e
    invocar o método `PlayTurn()` em cada uma delas. Repara que, além do
    construtor, só o método `PlayTurn()` pode ser invocado a partir de outras
    classes.
-5. Desenha o diagrama UML da solução apresentada.
+3. Desenha o diagrama UML da solução apresentada.
 
 > [Soluções](../solucoes/04_uml/07.md)
 
@@ -132,9 +130,10 @@ Responde às seguintes questões:
 
 8 - O exercício anterior corresponde a um _design pattern_ muito útil e comum,
 que consiste em definir os passos principais de um algoritmo ou operação,
-deferindo para as subclasses alguns ou todos os passos concretos. Por outras
-palavras, este _design pattern_ permite redefinir alguns passos do algoritmo ou
-operação sem alterar a estrutura do mesmo. Que _design pattern_ é este?
+delegando nas subclasses alguns ou todos os passos concretos do mesmo. Por
+outras palavras, este _design pattern_ permite redefinir alguns passos do
+algoritmo ou operação sem alterar a estrutura do mesmo. Que _design pattern_
+é este?
 
 > [Soluções](../solucoes/04_uml/08.md)
 

@@ -663,6 +663,60 @@ parâmetro e tipo especificado como argumento genérico.
 
 ---
 
+<a name="ex34"></a>
+34 - Considera a seguinte classe:
+
+```cs
+public abstract class NPC
+{
+    public float HP { get; protected set; }
+
+    public NPC(float hp)
+    {
+        HP = hp;
+    }
+
+    public void PlayTurn()
+    {
+        if (FindEnemies())
+        {
+            AttackEnemies();
+        }
+        if (FindFood())
+        {
+            EatFood();
+        }
+        Move();
+    }
+
+    protected abstract bool FindFood();
+    protected abstract bool FindEnemies();
+    protected abstract void EatFood();
+    protected abstract void AttackEnemies();
+
+    protected virtual void Move()
+    {
+        Console.WriteLine(this.GetType() + " has moved!");
+    }
+}
+```
+
+Responde às seguintes questões:
+
+1. É possível instanciar esta classe? Porquê?
+2. É possível estender esta classe? Porquê?
+3. Que métodos desta classe podem ser sobrepostos (_overridden_)? Porquê?
+4. Que métodos desta classe **não** podem ser sobrepostos (_overridden_)?
+   Porquê?
+
+Este exercício continua no [problema 7](04_uml.md#ex7) de UML e design de
+classes.
+
+> [Soluções](../solucoes/03_poo/34.md)
+
+---
+
+
 <!--
 Abstract
 polimorfismo (virtual/override)
