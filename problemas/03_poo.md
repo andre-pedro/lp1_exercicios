@@ -656,8 +656,8 @@ Mars              mars.map           92.1 %     2257.178
 ---
 
 33 - Escreve um método `static` que inicialize e devolva uma
-[lista genérica][List&lt;T&gt;] contendo _n_ cópias de um valor e tipos
-especificados.
+[lista genérica][List&lt;T&gt;] contendo _n_ cópias de um valor passado como
+parâmetro e tipo especificado como argumento genérico.
 
 > [Soluções](../solucoes/03_poo/33.md)
 
@@ -672,6 +672,13 @@ métodos iteráveis
 classes genéricas e default
 ienumerable<t>
 sintaxe de inicialização de coleções
+IComparable e sort
+
+template method:
+one game with various subgames
+food/drink recipe
+game options from several sources (file, args)
+workers example -> can be different NPCs example
 -->
 
 
