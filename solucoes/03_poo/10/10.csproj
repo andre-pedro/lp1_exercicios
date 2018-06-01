@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C743AED5-170A-471E-AC48-1F0493A00B75}</ProjectGuid>
+    <ProjectGuid>{11D6AF87-BC26-47B8-AB23-AE33F7414A93}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_10</RootNamespace>
     <AssemblyName>10</AssemblyName>
@@ -43,8 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Car.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestCar.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

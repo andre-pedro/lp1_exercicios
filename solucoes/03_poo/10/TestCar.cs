@@ -6,7 +6,7 @@ namespace LP1Exercises
     {
         static void Main(string[] args)
         {
-            Car car = new Car(1000, 220, FuelType.Gasoline);
+            Car car = new Car(weight: 1000, maxSpeed: 220, fuel: FuelType.Gasoline);
 
             // Test GetFuelType, GetWeight , GetMaxSpeed
             Console.WriteLine($"Car Fuel: {car.Fuel}");
@@ -24,8 +24,8 @@ namespace LP1Exercises
             car.Break(500);
             Console.WriteLine($"Speed: {car.Speed}");
             Console.WriteLine();
-            // Test SetMaxSpeeda
-            Car._MaxSpeed = 300;
+            // Test SetMaxSpeed
+            Car.MaxSpeed = 300;
             Console.WriteLine($"Car Max Speed: {Car.MaxSpeed}");
             car.Accelerate(500);
         }
