@@ -7,7 +7,7 @@ namespace LP1Exercises
         static void Main(string[] args)
         {
             Car car = new Car {Weight = 1000, Fuel = FuelType.Gasoline };
-            
+
             // Stats
             Car.MaxSpeed = 220;
             Console.WriteLine($"Car Fuel: {car.Fuel}");

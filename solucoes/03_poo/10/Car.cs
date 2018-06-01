@@ -16,10 +16,9 @@ namespace LP1Exercises
             Speed = 0;
         }
 
-        public Car(float weight, float maxSpeed, FuelType fuel)
+        public Car(float weight, FuelType fuel)
         {
             Weight = weight;
-            MaxSpeed = maxSpeed;
             Fuel = fuel;
             Speed = 0;
         }
