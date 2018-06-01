@@ -11,11 +11,9 @@ namespace LP1Exercises
         public FuelType Fuel { get; set; }
         public static float MaxSpeed { get; set; }
 
-        public Car(float weight, float maxSpeed, FuelType fuel)
+        public Car()
         {
-            Fuel = fuel;
-            Weight = weight;
-            MaxSpeed = maxSpeed;
+            MaxSpeed = 220;
             Speed = 0;
         }
 
