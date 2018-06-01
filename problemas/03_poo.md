@@ -572,6 +572,268 @@ Responde às seguintes questões:
 
 ---
 
+32 - Considera o seguinte tipo:
+
+```cs
+public struct GameMap
+{
+    private float topScore;
+    private int gamesPlayed;
+    private int gamesWon;
+
+    public string Name { get; }
+    public string Filename { get; }
+    public float SuccessRate
+    {
+        get {
+            if (gamesPlayed == 0)
+                return 0f;
+            else
+                return gamesWon / (float) gamesPlayed;
+        }
+    }
+    public float TopScore {
+        get
+        {
+            return topScore;
+        }
+        set
+        {
+            if (value > topScore)
+            {
+                topScore = value;
+            }
+        }
+    }
+
+    public GameMap(string name, string filename)
+    {
+        Name = name;
+        Filename = filename;
+        gamesPlayed = 0;
+        gamesWon = 0;
+        topScore = 0;
+    }
+
+    public void GamePlayed(bool won)
+    {
+        gamesPlayed++;
+        if (won)
+        {
+            gamesWon++;
+        }
+    }
+}
+```
+
+Responde às seguintes questões relativas ao tipo apresentado:
+
+1. O tipo apresentado é de valor ou referência? Justifica a tua resposta.
+2. Identifica as variáveis de instância e explica o seu propósito.
+3. Identifica as propriedades auto-implementadas.
+4. Identifica as propriedades só de leitura.
+5. Identifica os construtores.
+6. Identifica os métodos de instância.
+7. Escreve a documentação XML apropriada para a classe e respetivos membros.
+8. Escreve um método `static` que recebe um iterável de `GameMap` e imprime
+   uma tabela bem formatada com informação sobre os mesmos, tal como
+   representado na seguinte figura:
+
+```
+Name              Filename      Sucess Rate    Top Score
+--------------------------------------------------------
+Hell              hell.map           30.2 %     5069.921
+Beach             beach.map          44.0 %     2231.887
+Valley            valley.map         72.1 %      131.090
+Work              work.map           44.4 %     2334.114
+School            school.map         11.5 %       40.587
+Graveyard         graveyard.map      69.8 %     1631.103
+Mars              mars.map           92.1 %     2257.178
+```
+
+> [Soluções](../solucoes/03_poo/32.md)
+
+---
+
+33 - Escreve um método `static` que inicialize e devolva uma
+[lista genérica][List&lt;T&gt;] contendo _n_ cópias de um valor passado como
+parâmetro e tipo especificado como argumento genérico.
+
+> [Soluções](../solucoes/03_poo/33.md)
+
+---
+
+<a name="ex34"></a>
+34 - Considera a seguinte classe:
+
+```cs
+public abstract class NPC
+{
+    public float HP { get; protected set; }
+
+    public NPC(float hp)
+    {
+        HP = hp;
+    }
+
+    public void PlayTurn()
+    {
+        if (FindEnemies())
+        {
+            AttackEnemies();
+        }
+        if (FindFood())
+        {
+            EatFood();
+        }
+        Move();
+    }
+
+    protected abstract bool FindFood();
+    protected abstract bool FindEnemies();
+    protected abstract void EatFood();
+    protected abstract void AttackEnemies();
+
+    protected virtual void Move()
+    {
+        Console.WriteLine(this.GetType() + " has moved!");
+    }
+}
+```
+
+Responde às seguintes questões:
+
+1. É possível instanciar esta classe? Porquê?
+2. É possível estender esta classe? Porquê?
+3. Que métodos desta classe podem ser sobrepostos (_overridden_)? Porquê?
+4. Que métodos desta classe **não** podem ser sobrepostos (_overridden_)?
+   Porquê?
+
+Este exercício continua no [problema 7](04_uml.md#ex7) de UML e design de
+classes.
+
+> [Soluções](../solucoes/03_poo/34.md)
+
+---
+
+35 - Considera a seguinte classe:
+
+```cs
+public class Problem
+{
+    public static void Main()
+    {
+        // Um array de objetos de diferentes tipos
+        object[] stuff = { "ola", 1, 2.3, 5f, 12L, 4UL, 5U, "bye", 4, 9 };
+        // Imprimir apenas objetos do tipo inteiro
+        foreach (int i in Filter<object, int>(stuff))
+        {
+            Console.WriteLine("int = " + i);
+        }
+        // Imprimir apenas objetos do tipo float
+        foreach (float f in Filter<object, float>(stuff))
+        {
+            Console.WriteLine("float = " + f);
+        }
+    }
+}
+```
+
+Escreve e adiciona o método `Filter()` à classe `Problem` de modo a que o
+código no `Main()` faça sentido e funcione.
+
+> [Soluções](../solucoes/03_poo/35.md)
+
+---
+
+36 - Considera a seguinte classe:
+
+```cs
+public class Texture
+{
+    private string textureFile;
+
+    public Texture(string textureFile)
+    {
+        this.textureFile = textureFile;
+    }
+}
+```
+
+Cria uma classe chamada `PNGTexture` cujo construtor aceita um nome de
+ficheiro, invocando o construtor da classe base com o nome de ficheiro
+concatenado com a _string_ ".png".
+
+> [Soluções](../solucoes/03_poo/36.md)
+
+---
+
+37 - Quais são os requisitos para que uma classe possa ser instanciada usando
+a sintaxe de inicialização de coleções?
+
+> [Soluções](../solucoes/03_poo/37.md)
+
+---
+
+38 - Quais são os requisitos para que uma instância de uma classe possa ser
+usada num `foreach` como fornecedor de itens?
+
+> [Soluções](../solucoes/03_poo/38.md)
+
+---
+
+39 - Numa classe ou método genérico como podemos obrigar a que o tipo genérico
+tenha um construtor vazio?
+
+> [Soluções](../solucoes/03_poo/39.md)
+
+---
+
+40 - Numa classe ou método genérico como podemos obrigar a que o tipo genérico
+seja um tipo de referência?
+
+> [Soluções](../solucoes/03_poo/40.md)
+
+---
+
+41 - Numa classe ou método genérico como podemos inicializar o tipo genérico
+com o seu valor por omissão (equivalente a zero ou `null`)?
+
+> [Soluções](../solucoes/03_poo/41.md)
+
+---
+
+<!--
+
+42 - Cria uma classe chamada `ProceduralGenerator` para criação de conteúdo
+procedimental para jogos. A classe deve ter:
+
+* Um gerador de números aleatórios privado.
+* Um construtor vazio, que inicializa o gerador com a semente por omissão (hora
+  atual).
+* Um construtor que aceita uma semente para inicializar o gerador.
+* Um método para devolver um número aleatório de NPCs dependente da dificuldade
+  do nível (1, 2, ...).
+* Um método para devolver o _health_ inicial aleatório de um NPC dada a
+  dificuldade do nível (1, 2, ...).
+* Um método abstrato e protegido que define a função  
+
+> [Soluções](../solucoes/03_poo/42.md)
+
+---
+
+
+classes genéricas e default
+sintaxe de inicialização de coleções
+IComparable e sort
+
+template method:
+one game with various subgames
+food/drink recipe
+game options from several sources (file, args)
+workers example -> can be different NPCs example
+-->
+
 
 [Stack]: https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.stack
 [System]: https://docs.microsoft.com/pt-pt/dotnet/api/system
