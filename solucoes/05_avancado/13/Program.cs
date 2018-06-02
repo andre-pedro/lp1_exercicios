@@ -16,7 +16,7 @@ namespace LP1Exercises
             List<string> allText = new List<string>();
 
             // If a file is given as argument
-            if (args.Length <= 1)
+            if (args.Length == 1)
             {
                 // Filename is first argument
                 filename = args[0];
@@ -32,16 +32,22 @@ namespace LP1Exercises
                     // Add text to list 
                     allText.Add(userInput + "\n");
 
-                    // Write text on file
-                    File.WriteAllLines(filename, allText);
-
                 } while (userInput != "");
+
+                // Write text on file
+                File.WriteAllLines(filename, allText);
             }
             // If there is no file as argument
-            else
+            else if (args.Length < 1)
             {
                 // Ask for a file
                 Console.WriteLine("Please enter a filename.");
+            }
+            else if (args.Length > 1)
+            {
+                // Ask for a file
+                Console.WriteLine("You have to many arguments. Only 1" +
+                    " argument is accepted.");
             }
         }
     }
