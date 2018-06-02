@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // As informações gerais sobre um assembly são controladas por
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associada a um assembly.
-[assembly: AssemblyTitle("03_12")]
+[assembly: AssemblyTitle("ex03_12_v2")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("03_12")]
+[assembly: AssemblyProduct("ex03_12_v2")]
 [assembly: AssemblyCopyright("Copyright © HP Inc. 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // O GUID a seguir será destinado à ID de typelib se este projeto for exposto para COM
-[assembly: Guid("6f76a1a2-7b96-4b8d-beb9-6cab6976fb61")]
+[assembly: Guid("05f3796a-3f1a-41bb-8f2e-f792c38c9ce0")]
 
 // As informações da versão de um assembly consistem nos quatro valores a seguir:
 //
