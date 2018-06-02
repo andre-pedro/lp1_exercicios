@@ -76,9 +76,8 @@ class Program
 
 5 - Cria uma classe, com **um único** método estático `Main()`, que solicita ao
 utilizador um número inteiro positivo e apresenta o respetivo número da
-[sequência de Lucas](https://en.wikipedia.org/wiki/Lucas_number). Este número
-é tipicamente calculado de forma recursiva, e para o efeito podem usar funções
-locais.
+[sequência de Lucas](https://en.wikipedia.org/wiki/Lucas_number). O número
+deve ser calculado de forma recursiva com uma ou mais **funções locais**.
 
 > [Soluções](../solucoes/05_avancado/05.md)
 
