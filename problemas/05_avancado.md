@@ -209,3 +209,49 @@ nada).
 > [Soluções](../solucoes/05_avancado/14.md)
 
 ---
+---
+
+15 - Considera a seguinte classe:
+
+```cs
+public class Weapon
+{
+    public float AttackPower { get; }
+    public float Durability { get; }
+
+    public Weapon(float attackPower, float durability)
+    {
+        AttackPower = attackPower;
+        Durability = durability;
+    }
+}
+```
+
+Assume que temos uma lista de armas, ou seja, uma variável do tipo
+`List<Weapon>` e responde às seguintes questões:
+
+1. Faz as alterações necessárias à classe `Weapon` de modo a que quando
+invocarmos o método
+[`Sort()`](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1.sort)
+(ou mais concretamente, o seu
+[_overload_ sem parâmetros](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1.sort)) da classe `List<T>`, as instâncias de `Weapon` fiquem ordenadas por
+`AttackPower` decrescente. _Sugestão:_ confere a interface
+[`IComparable<T>`](https://docs.microsoft.com/pt-pt/dotnet/api/system.icomparable-1).
+2. Cria uma classe `Program` com um método `Main()` para testar uma lista de
+várias instâncias de `Weapon`, nomeadamente a sua ordenação por `AttackPower`
+decrescente.
+3. O método
+[`Sort()`](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1.sort)
+da classe `List<T>` tem vários _overloads_. Um deles,
+[`Sort(IComparer<T>)`](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1.sort),
+permite ordenar a lista usando um critério de ordenação definido numa classe
+extra. Tal classe, tal como indicado na assinatura do método, tem de
+implementar a interface
+[`IComparer<T>`](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.icomparer-1). Cria uma classe deste tipo cujo critério de ordenação seja `Durability`
+crescente.  
+4. Adiciona ao método `Main()` da classe `Program` um teste à ordenação
+por `Durability` crescente usando o método
+[`Sort(IComparer<T>)`](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1.sort)
+e a classe desenvolvida no ponto anterior.
+
+> [Soluções](../solucoes/05_avancado/15.md)
