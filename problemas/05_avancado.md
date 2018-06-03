@@ -232,26 +232,29 @@ Assume que temos uma lista de armas, ou seja, uma variável do tipo
 
 1. Faz as alterações necessárias à classe `Weapon` de modo a que quando
 invocarmos o método
-[`Sort()`](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1.sort)
+[`Sort`](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1.sort)
 (ou mais concretamente, o seu
-[_overload_ sem parâmetros](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1.sort)) da classe `List<T>`, as instâncias de `Weapon` fiquem ordenadas por
-`AttackPower` decrescente. _Sugestão:_ confere a interface
+[_overload_ sem parâmetros](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1.sort#System_Collections_Generic_List_1_Sort)) da classe `List<T>`, as instâncias de `Weapon` fiquem ordenadas por
+`AttackPower` decrescente. _Sugestão:_ a classe `Weapon` tem de implementar
 [`IComparable<T>`](https://docs.microsoft.com/pt-pt/dotnet/api/system.icomparable-1).
 2. Cria uma classe `Program` com um método `Main()` para testar uma lista de
 várias instâncias de `Weapon`, nomeadamente a sua ordenação por `AttackPower`
-decrescente.
+decrescente usando o método
+[`Sort()`](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1.sort#System_Collections_Generic_List_1_Sort)
+sem parâmetros.
 3. O método
-[`Sort()`](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1.sort)
+[`Sort`](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1.sort)
 da classe `List<T>` tem vários _overloads_. Um deles,
-[`Sort(IComparer<T>)`](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1.sort),
-permite ordenar a lista usando um critério de ordenação definido numa classe
-extra. Tal classe, tal como indicado na assinatura do método, tem de
-implementar a interface
-[`IComparer<T>`](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.icomparer-1). Cria uma classe deste tipo cujo critério de ordenação seja `Durability`
+[`Sort(IComparer<T>)`](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1.sort#System_Collections_Generic_List_1_Sort_System_Collections_Generic_IComparer__0__),
+permite ordenar a lista usando o critério de ordenação definido numa classe
+extra. Tal classe, como indicado na assinatura do método, tem de implementar a
+interface
+[`IComparer<T>`](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.icomparer-1).
+Cria uma classe deste tipo cujo critério de ordenação seja `Durability`
 crescente.  
 4. Adiciona ao método `Main()` da classe `Program` um teste à ordenação
 por `Durability` crescente usando o método
-[`Sort(IComparer<T>)`](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1.sort)
+[`Sort(IComparer<T>)`](https://docs.microsoft.com/pt-pt/dotnet/api/system.collections.generic.list-1.sort#System_Collections_Generic_List_1_Sort_System_Collections_Generic_IComparer__0__)
 e a classe desenvolvida no ponto anterior.
 
 > [Soluções](../solucoes/05_avancado/15.md)
