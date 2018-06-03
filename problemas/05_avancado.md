@@ -209,7 +209,6 @@ nada).
 > [Soluções](../solucoes/05_avancado/14.md)
 
 ---
----
 
 15 - Considera a seguinte classe:
 
@@ -258,3 +257,58 @@ por `Durability` crescente usando o método
 e a classe desenvolvida no ponto anterior.
 
 > [Soluções](../solucoes/05_avancado/15.md)
+
+---
+
+16 - Considera o seguinte programa:
+
+```cs
+using System;
+
+public class NPC
+{
+    public float HP { get; private set; }
+
+    public NPC(float hp) { HP = hp; }
+
+    public void TakeHit(float damage)
+    {
+        HP -= damage;
+        if (HP < 0) HP = 0;
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        NPC[] npcs = new NPC[]
+        {
+            new NPC(12.5f),
+            new NPC(19.5f)
+        };
+
+        NPC npc1 = npcs[0];
+        npc1.TakeHit(5f);
+
+        foreach(NPC npc in npcs)
+        {
+            Console.WriteLine($"HP={npc.HP}");
+        }
+    }
+}
+```
+
+Responde às seguintes questões:
+
+1. O que é impresso pelo programa? Descreve sucintamente o que acontece no
+`Main()`.
+2. Se a classe `NPC` passar a ser uma `struct`, o que é impresso pelo programa?
+Porquê?
+3. Que alteração temos de fazer no `Main()` (à parte de manipular o NPC
+diretamente no _array_), para podermos alterar o valor do HP do NPC, sendo este
+uma `struct`?
+
+> [Soluções](../solucoes/05_avancado/16.md)
+
+---
