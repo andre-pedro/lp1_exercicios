@@ -6,7 +6,7 @@ namespace LP1Exercises
     {
         static void Main(string[] args)
         {
-            // Instantiate class HighScoreManager
+            // Instantiate new instance of class HighScoreManager
             HighScoreManager hsm = new HighScoreManager();
 
             // Add scores as example
@@ -21,10 +21,10 @@ namespace LP1Exercises
             // Save scores to file
             hsm.Save();
 
-            // Print on consle formated table using ToString()
+            // Print on console all scores on file using ToString()
             Console.WriteLine(hsm);
 
-            // Print Name and Score of list using GetScores()
+            // Print all Names and Scores in the list using GetScores()
             foreach (Tuple<string, float> highscore in hsm.GetScores())
             {
                 Console.WriteLine($"Name: {highscore.Item1,-14}      " +
