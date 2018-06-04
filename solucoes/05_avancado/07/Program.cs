@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _07
+namespace LP1Exercises
 {
     class Program
     {
@@ -16,13 +16,14 @@ namespace _07
             {
                 double tmp;
                 Console.WriteLine("Escreva um numero");
-                tmp = Convert.ToInt32(Console.ReadLine());
+                tmp = Convert.ToDouble(Console.ReadLine());
                 numeros[i] = tmp;
             }
 
             Console.WriteLine();
             Console.WriteLine($"Moda:{Stats.Moda(numeros)} Mediana:{Stats.Mediana(numeros)} " +
-                $"Média:{Stats.Media(numeros)} Máximo:{Stats.Maximo(numeros)} Minimo:{Stats.Minimo(numeros)}");
+                $"Média:{Stats.Media(numeros)} Máximo:{Stats.Maximo(numeros)}" +
+                $" Minimo:{Stats.Minimo(numeros)}");
 
         }
     }
