@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _07
 {
@@ -19,7 +15,6 @@ namespace _07
             for (int i = 0; i < numeros.Length; i++)
             {
                 double tmp;
-                double[] copy = new double[numeros.Length];
                 Console.WriteLine("Escreva um numero");
                 tmp = Convert.ToInt32(Console.ReadLine());
                 numeros[i] = tmp;

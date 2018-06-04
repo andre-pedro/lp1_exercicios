@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace _07
 {
@@ -32,16 +29,33 @@ namespace _07
 
         public static double Moda(double[] array)
         {
-            double moda = 0 ;
-            foreach (double num in array)
+            double tmp = 0;
+            int tempCont, cont = 1;
+
+            double moda = array[0];
+
+            for (int i = 0; i < array.Length; i++)
             {
-                if (num != 0 && moda != num)
                 {
-                    moda = num;
+                    tmp = array[i];
+                    tempCont = 0;
+
+                    for (int j = 0; j < array.Length; j++)
+                    {
+                        {
+                            if (tmp == array[j])
+
+                                tempCont++;
+
+                        }
+                    }
+                    if (tempCont > cont)
+                    {
+                        moda = tmp;
+                        cont = tempCont;
+                    }
+
                 }
-            
-
-
             }
             return moda;
         }
@@ -49,7 +63,7 @@ namespace _07
         public static double Minimo(double[] array)
         {
             double min = array.Min();
-            
+
             return min;
         }
 
@@ -61,3 +75,5 @@ namespace _07
         }
     }
 }
+
+
