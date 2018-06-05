@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 
-
 namespace LP1Exercises
 {
     public static class Stats
@@ -10,7 +9,7 @@ namespace LP1Exercises
         /// <summary>
         /// Método que calcula a média.
         /// </summary>
-        /// <param name="array">Obtêm a média dos valores que
+        /// <param name="array">Obtem a média dos valores que
         /// se encontram dentro desde array de doubles.
         ///</param>
         /// <returns>Devolve o cálculo da média através de um
@@ -29,7 +28,7 @@ namespace LP1Exercises
         /// <summary>
         /// Método que calcula a mediana.
         /// </summary>
-        /// <param name="array">Obtêm a mediana dos valores que
+        /// <param name="array">Obtem a mediana dos valores que
         /// se encontram dentro desde array de doubles.</param>
         /// <returns>Devolve o cálculo da mediana.</returns>
         public static double Mediana(params double[] array)
@@ -49,7 +48,7 @@ namespace LP1Exercises
         /// Método que calcula a moda, ou seja o número 
         /// que aparece mais vezes no array.
         /// </summary>
-        /// <param name="array">Obtêm a moda dos valores que
+        /// <param name="array">Obtem a moda dos valores que
         /// se encontram dentro desde array de doubles</param>
         /// <returns>Devolve a moda através de um double</returns>
         public static double Moda(params double[] array)
@@ -87,10 +86,11 @@ namespace LP1Exercises
 
 
         /// <summary>
-        /// Método que indica o número mais baixo.
+        /// Método que devolve o mínimo.
         /// </summary>
-        /// <param name="array">Recebe um array de doubles do qual 
-        /// irá verificar qual o número mais baixo que nele se encontra.</returns>
+        /// <param name="array">Obtem o mínimo dos valores que
+        /// se encontram dentro desde array de doubles</param>
+        /// <returns>Devolve o mínimo através de um double</returns>
         public static double Minimo(params double[] array)
         {
 
@@ -102,12 +102,11 @@ namespace LP1Exercises
         }
 
         /// <summary>
-        /// Método que indica o número mais
-        /// elevado.
+        /// Método que indica o máximo.
         /// </summary>
-        /// <param name="array">Obtêm o número mais elevado
-        /// que se encontra no array fornecido.</param>
-        /// <returns>Irá retornar o número mais elevado com ajuda do Max().</returns>
+        /// <param name="array">Obtem o máximo dos valores
+        /// que se encontram no array fornecido.</param>
+        /// <returns>Devolve o máximo através de um double</returns>
         public static double Maximo(params double[] array)
         {
 
