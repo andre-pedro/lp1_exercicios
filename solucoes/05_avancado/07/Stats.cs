@@ -7,12 +7,11 @@ namespace LP1Exercises
     {
 
         /// <summary>
-        /// Metodo que calcula a media, recebe
-        /// um array de doubles e devolve um double
+        /// Método que calcula a media
         /// </summary>
-        /// <param name="array"></param>
-        /// <returns></returns>
-        public static double Media(double[] array)
+        /// <param name="array">recebe um array de doubles</param>
+        /// <returns>devolve um double</returns>
+        public static double Media(params double[] array)
         {
             double total = 0;
             foreach (double num in array)
@@ -24,12 +23,11 @@ namespace LP1Exercises
 
 
         /// <summary>
-        /// Método que calcula a mediana, recebe um array
-        /// de doubles e devolve um double
+        /// Método que calcula a mediana
         /// </summary>
-        /// <param name="array"></param>
-        /// <returns></returns>
-        public static double Mediana(double[] array)
+        /// <param name="array">recebe um array de doubles</param>
+        /// <returns>devolve um double</returns>
+        public static double Mediana(params double[] array)
         {
             int size = array.Length;
             int mid = size / 2;
@@ -42,14 +40,11 @@ namespace LP1Exercises
         }
 
         /// <summary>
-        /// Metodo que calcula a moda, recebe um array
-        /// de doubles e devolve um double, que corresponde ao
-        /// numero que aparece mais vezes, caso existe 2 numeros
-        /// com o mesmo numero de aparição devolve o primeiro
+        /// Método que calcula a moda
         /// </summary>
-        /// <param name="array"></param>
-        /// <returns></returns>
-        public static double Moda(double[] array)
+        /// <param name="array">recebe um array de doubles</param>
+        /// <returns>devolve a moda</returns>
+        public static double Moda(params double[] array)
         {
             double tmp = 0;
             int tempCont, cont = 1;
@@ -81,16 +76,16 @@ namespace LP1Exercises
             }
             return moda;
         }
+        ///O using System.Linq é necessário para termos os
+        ///métodos Max() e Min() disponíveis em coleções.
+
 
         /// <summary>
-        /// Metodo que calcula o minimo atraves do Min()
-        /// Ao usar using System.Linq
-        /// permite-nos usar o método  Min() 
-        /// disponíveis em coleções.
+        /// Método que calcula o minimo 
         /// </summary>
-        /// <param name="array"></param>
-        /// <returns></returns>
-        public static double Minimo(double[] array)
+        /// <param name="array">recebe um array de doubles</param>
+        /// <returns>devolve um double</returns>
+        public static double Minimo(params double[] array)
         {
             double min = array.Min();
 
@@ -98,14 +93,11 @@ namespace LP1Exercises
         }
 
         /// <summary>
-        /// Metodo que calcula o maximo atraves do Max()
-        /// Ao usar using System.Linq
-        /// permite-nos usar o método  Man() 
-        /// disponíveis em coleções. 
+        /// Metodo que calcula o maximo  
         /// </summary>
-        /// <param name="array"></param>
-        /// <returns></returns>
-        public static double Maximo(double[] array)
+        /// <param name="array">recebe um array de doubles</param>
+        /// <returns>devolve um double</returns>
+        public static double Maximo(params double[] array)
         {
             double max = array.Max();
 
